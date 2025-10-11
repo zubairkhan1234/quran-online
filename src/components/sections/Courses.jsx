@@ -2,12 +2,13 @@
 import Image from 'next/image'
 import React from 'react'
 import Slider from "react-slick";
+import quran from '../../../public/images/quran.webp';
 function Courses() {
     const courses = [
-        { title: "Reading Quran Basics", price: "$99.00", image: "/quran.png" },
-        { title: "Quran & Tajweed", price: "$35.00", image: "/quran.png" },
-        { title: "Quran Recitation", price: "$70.00", image: "/quran.png" },
-        { title: "Quran Memorization", price: "$120.00", image: "/quran.png" },
+        { title: "Reading Quran Basics", price: "$99.00", image: quran },
+        { title: "Quran & Tajweed", price: "$35.00", image: quran },
+        { title: "Quran Recitation", price: "$70.00", image: quran },
+        { title: "Quran Memorization", price: "$120.00", image: quran },
     ];
     
     const settings = {

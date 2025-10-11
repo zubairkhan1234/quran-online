@@ -4,6 +4,8 @@ import ClassActivity from "@/components/sections/ClassActivity";
 import Header from "@/components/header/Header";
 
 import "./globals.css";
+import LearningSection from "@/components/sections/LearningSection";
+import SuccessSection from "@/components/sections/SuccessSection";
 export default function Home() {
   return (
     <div className="font-roboto">
@@ -14,7 +16,13 @@ export default function Home() {
       <div className="container m-auto">
         <Courses />
       </div>
-
+      <div>
+        {/* <LearningSection /> */}
+        <LearningSection />
+      </div>
+      <div>
+        <SuccessSection />
+      </div>
       <div className="container m-auto">
         <ClassActivity />
       </div>
