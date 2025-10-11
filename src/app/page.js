@@ -1,10 +1,16 @@
 import Navigation from "@/components/sections/Navigation";
 import Courses from "@/components/sections/Courses";
 import ClassActivity from "@/components/sections/ClassActivity";
+import Header from "@/components/header/Header";
+
+import "./globals.css";
 export default function Home() {
   return (
     <div className="font-roboto">
       <Navigation />
+      <section className="header-dark">
+        <Header />
+      </section>
       <div className="container m-auto">
         <Courses />
       </div>

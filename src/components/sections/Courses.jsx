@@ -1,40 +1,75 @@
+'use client';
 import Image from 'next/image'
 import React from 'react'
-import Buttons from '../buttons/Buttons'
-
+import Slider from "react-slick";
 function Courses() {
+    const courses = [
+        { title: "Reading Quran Basics", price: "$99.00", image: "/quran.png" },
+        { title: "Quran & Tajweed", price: "$35.00", image: "/quran.png" },
+        { title: "Quran Recitation", price: "$70.00", image: "/quran.png" },
+        { title: "Quran Memorization", price: "$120.00", image: "/quran.png" },
+    ];
+    
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3, // number of slides visible at once
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024, // for tablets
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 640, // for mobile
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
     return (
-        <div className=''>
-            <h1 className='my-15'>Featured Courses</h1>
-            <div className='flex justify-between flex-wrap'>
-                {[1, 2, 4, 5, 6, 7,8,8,9,0].map((value, index) => {
-                    return <div className='border-1 w-[300px] rounded-[10px] m-[10px]' key={index + 22}>
-                        <div className='p-3'>
-                            <Image src={'/image.png'} width={100} height={150} alt='logo1' />
-                            <h3>Reading Quran Basic </h3>
-                            <div>
-                                <div>
-                                    <p>Duration</p>
-                                    <p>Live Classes</p>
+
+        <section className="bg-softGray py-16">
+            <div className="container mx-auto px-6">
+                <h2 className="text-3xl font-bold text-darkGray1 text-center mb-10">
+                    Explore Featured <span className="text-green">Courses</span>
+                </h2>
+
+                <Slider {...settings}>
+                    {courses.map((course, index) => (
+                        <div key={index} className="p-4">
+                            <div className="bg-white rounded-xl shadow-md p-6 text-center">
+                                <Image
+                                    src={course.image}
+                                    alt={course.title}
+                                    width={180}
+                                    height={140}
+                                    className="mx-auto"
+                                />
+                                <h3 className="text-xl font-semibold mt-4">{course.title}</h3>
+                                <p className="text-green font-bold mt-2">{course.price}</p>
+                                <p className="text-grayBlue text-sm mt-2">Live Classes · Beginner</p>
+
+                                <div className="mt-4 flex justify-center space-x-3">
+                                    <button className="bg-green text-white px-4 py-2 rounded-full hover:bg-green/90">
+                                        Register Now
+                                    </button>
+                                    <button className="border border-green text-green px-4 py-2 rounded-full hover:bg-green hover:text-white">
+                                        See Details
+                                    </button>
                                 </div>
-                                <div>
-                                    <p>Level</p>
-                                    <p>Beginner</p>
-                                </div>
-                            </div>
-                            <div className='flex justify-around'>
-                                <Buttons fill={true} className={`{bg-[${'#659a68'}]}`}>
-                                    Regitster Now
-                                </Buttons>
-                                <Buttons>
-                                    See Details
-                                </Buttons>
                             </div>
                         </div>
-                    </div>
-                })}
+                    ))}
+                </Slider>
             </div>
-        </div>
+        </section>
     )
 }
 
