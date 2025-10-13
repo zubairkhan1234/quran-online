@@ -3,10 +3,10 @@ import React from "react";
 function Buttons({ fill = false, children, className }) {
   return (
     <button
-         className={`font-roboto font-bold px-4 rounded-[30px] mx-2 transition 
+         className={`font-roboto font-bold px-4 rounded-[30px] mx-2 transition  cursor-pointer
         ${fill 
-          ? `border-2 py-2 bg-blue-500 hover:bg-blue-500 text-white ${className}`
-          : "border-2 py-[4px] border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+          ? `bg-[#659a68] text-white py-2 ${className}`
+          : "border-2 py-[4px] border-white text-white hover:bg-[#659a68] hover:text-white hover:border-[#659a68] "
         }
         ${className}`}
     >

@@ -11,7 +11,7 @@ export default function LearningSection() {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Easy Quran learning through{" "}
-            <span className="text-green-600">online</span>
+            <span className="text-[#659a68]">online</span>
           </h2>
           <p className="text-gray-600 mb-6">
             Online Quran learning gives you the convenience of learning Quran
@@ -52,7 +52,7 @@ export default function LearningSection() {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             How to memorize Quran{" "}
-            <span className="text-green-600">easily online</span>
+            <span className="text-[#659a68]">easily online</span>
           </h2>
           <p className="text-gray-600 mb-6">
             Memorizing the Quran is a noble and rewarding endeavor. With the

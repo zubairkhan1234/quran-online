@@ -10,8 +10,8 @@ export default function SuccessSection() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900">
-            Creating student <span className="text-green-600">success</span>{" "}
-            with our <span className="text-green-600">Al Quran</span>
+            Creating student <span className="text-[#659a68]">success</span>{" "}
+            with our <span className="text-[#659a68]">Al Quran</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             We understand that everyone’s schedule is different. That’s why we
@@ -20,7 +20,7 @@ export default function SuccessSection() {
         </div>
 
         {/* Green Feature Bar */}
-        <div className="bg-green-700 text-white rounded-2xl py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-[#659a68] text-white rounded-2xl py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               icon: <FaBook size={28} />,

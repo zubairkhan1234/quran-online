@@ -1,6 +1,6 @@
 import Navigation from "@/components/sections/Navigation";
 import Courses from "@/components/sections/Courses";
-import ClassActivity from "@/components/sections/ClassActivity";
+// import ClassActivity from "@/components/sections/ClassActivity";
 import Header from "@/components/sections/Header";
 
 import "./globals.css";

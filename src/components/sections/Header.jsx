@@ -42,10 +42,10 @@ function HeroSection() {
                         </p>
 
                         <div className="mt-6 space-x-4">
-                            <button className="bg-[#659a68] text-white px-5 py-2 rounded-full hover:bg-green/90 transition">
+                            <button className="bg-[#659a68] cursor-pointer text-white px-5 py-2 rounded-full hover:bg-green/90 transition">
                                 Find your course
                             </button>
-                            <button className="border border-green text-green px-5 py-2 rounded-full hover:bg-green hover:text-white transition">
+                            <button className="border cursor-pointer px-5 py-2 rounded-full hover:bg-green hover:text-white transition">
                                 Sign up for Free
                             </button>
                         </div>
