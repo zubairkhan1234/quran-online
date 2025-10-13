@@ -34,3 +34,23 @@ body {
 .header-dark{
   background-color: #1d1d1d;
 }
+
+.slick-prev,
+.slick-next {
+  width: 50px !important;
+  height: 30px !important;
+  background-color: #659a68 !important;
+  border-radius: 5px !important;
+  border: none !important;
+  z-index: 1 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.slick-prev {
+  left: 115px !important;
+}
+
+.slick-next {
+  right: -10px !important;
+}
+
