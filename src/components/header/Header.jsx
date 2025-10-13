@@ -2,7 +2,6 @@
 
 'use client';
 import Image from "next/image";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
 
@@ -27,7 +26,7 @@ function HeroSection() {
     };
     return (
         <>
-            <section className="bg-darkGray1 text-white py-16">
+            <section className="text-white py-16">
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
 
                     {/* Left Content */}
