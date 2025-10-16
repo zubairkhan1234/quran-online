@@ -1,7 +1,9 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+import "react-multi-carousel/lib/styles.css";
 
 export const metadata = {
   title: "Online Quran Academy",

@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div className="font-roboto">
       <Navigation />
-      {/* <section className="header-dark">
+      <section className="header-dark">
         <Header />
-      </section> */}
+      </section>
       <div className="container m-auto">
         <Courses />
       </div>
