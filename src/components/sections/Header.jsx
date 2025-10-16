@@ -1,10 +1,10 @@
-
-
 'use client';
 import Image from "next/image";
 import Slider from "react-slick";
 import "../../styles/header.module.css"
 import quran from '../../../public/images/quran.webp'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function HeroSection() {
@@ -25,6 +25,15 @@ function HeroSection() {
         // autoplay: true,
         autoplaySpeed: 2000,
         
+
+        responsive: [
+            {
+              breakpoint: 768, // screens smaller than 768px (mobile)
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
     };
 
     return (

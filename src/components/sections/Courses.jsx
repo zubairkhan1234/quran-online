@@ -1,29 +1,15 @@
 'use client';
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic';
+import React, { use } from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import quran from '../../../public/images/quran.webp';
 
 // Dynamically import react-slick to disable SSR rendering
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 function Courses() {
-  const [slidesToShow, setSlidesToShow] = useState(3);
-
-  useEffect(() => {
-    // Detect initial screen width on client side
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width <= 640) setSlidesToShow(1);
-      else if (width <= 1024) setSlidesToShow(2);
-      else setSlidesToShow(3);
-    };
-
-    handleResize(); // Run once when component mounts
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const courses = [
     { title: "Reading Quran Basics", price: "$99.00", image: quran },
     { title: "Quran & Tajweed", price: "$35.00", image: quran },
@@ -32,14 +18,36 @@ function Courses() {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow,
+    slidesToShow: 3, // number of slides visible at once
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024, // for tablets
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // mobile (all phones)
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
+  useEffect(() => {
+
+    handleResize(); // Run once when component mounts
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
 
   return (
     <section className="bg-softGray py-16">
