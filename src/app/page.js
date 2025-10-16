@@ -19,18 +19,18 @@ export default function Home() {
       <div className="container m-auto">
         <Courses />
       </div>
-      {/* <div>
+      <div>
         <LearningSection />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <SuccessSection />
-      </div> */}
-      {/* <div className="container m-auto">
+      </div>
+      <div className="container m-auto">
         <ClassActivity />
-      </div> */}
-      {/* <div className="header-dark">
+      </div>
+      <div className="header-dark">
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 }
