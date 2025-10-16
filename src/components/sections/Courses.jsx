@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image'
-import React, { use } from 'react'
-import Slider from "react-slick";
+import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import quran from '../../../public/images/quran.webp';
+import quran from '../../../public/images/quran.webp'
 
-// Dynamically import react-slick to disable SSR rendering
+// ✅ Dynamically import react-slick (disable SSR)
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 function Courses() {
@@ -21,33 +21,26 @@ function Courses() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // number of slides visible at once
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
-      {
-        breakpoint: 1024, // for tablets
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768, // mobile (all phones)
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
-  useEffect(() => {
 
-    handleResize(); // Run once when component mounts
+  // Example: you mentioned handleResize, but it’s not defined in your code.
+  // If you’re not using it, remove this useEffect completely.
+  useEffect(() => {
+    const handleResize = () => {
+      // optional: put your responsive logic here
+    };
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-
 
   return (
     <section className="bg-softGray py-16">

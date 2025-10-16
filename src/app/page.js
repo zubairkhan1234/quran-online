@@ -1,5 +1,5 @@
 import Navigation from "@/components/sections/Navigation";
-// import Courses from "@/components/sections/Courses";
+import Courses from "@/components/sections/Courses";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import ClassActivity from "@/components/sections/ClassActivity";
@@ -17,7 +17,7 @@ export default function Home() {
         <Header />
       </section> */}
       <div className="container m-auto">
-        {/* <Courses /> */}
+        <Courses />
       </div>
       {/* <div>
         <LearningSection />
