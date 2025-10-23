@@ -60,7 +60,7 @@ function HeroSection() {
         </div>
 
         {/* ✅ Right Carousel */}
-        <div className="w-100 md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-8 text-center">
+        <div className="w-100 md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-0  md:p-8 text-center">
           <Carousel
             responsive={responsive}
             infinite={true}
