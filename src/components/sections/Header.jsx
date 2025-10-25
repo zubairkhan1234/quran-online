@@ -4,9 +4,38 @@ import dynamic from "next/dynamic";
 import "../../styles/header.module.css";
 import quran from "../../../public/images/quran.webp";
 import "react-multi-carousel/lib/styles.css";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import { FiBarChart } from "react-icons/fi";
+import { IoMdTime } from "react-icons/io";
 
 // ✅ Dynamically import react-multi-carousel to avoid SSR errors
 const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false });
+
+/* ===========================================================
+   ✅ Custom Arrows Components
+   These components will receive "onClick" from react-multi-carousel
+   and trigger next/prev slide navigation.
+=========================================================== */
+
+const CustomLeftArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute -left-1 top-40 -translate-y-1/2 bg-white  px-4 py-2 rounded-rounded shadow-lg hover:bg-yellow-600 transition-all z-10"
+    aria-label="Previous Slide"
+  >
+    <FaArrowLeft size={15} className="text-black" />
+  </button>
+);
+
+const CustomRightArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute -right-1 top-40 -translate-y-1/2 bg-yellow-500  px-4 py-2 rounded shadow-lg hover:bg-yellow-600 transition-all z-10"
+    aria-label="Next Slide"
+  >
+    <FaArrowRight size={15} className=" text-black" />
+  </button>
+);
 
 function HeroSection() {
   const courses = [
@@ -39,7 +68,6 @@ function HeroSection() {
   return (
     <section className="bg-darkGray1 text-white py-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-
         {/* ✅ Left Content */}
         <div className="md:w-1/2">
           <h1 className="text-4xl font-bold leading-snug text-lightCream">
@@ -59,15 +87,17 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* ✅ Right Carousel */}
-        <div className="w-100 md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-0  md:p-8 text-center">
+        {/* ✅ Right Carousel with Custom Arrows */}
+        <div className="w-full md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-0 md:p-8 ">
           <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={true}
+            // autoPlay={true}
             autoPlaySpeed={2500}
-            showDots={true}
-            arrows={false}
+            showDots={false}
+            arrows={true}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
             keyBoardControl={true}
             customTransition="transform 500ms ease-in-out"
             transitionDuration={500}
@@ -76,23 +106,47 @@ function HeroSection() {
           >
             {courses.map((course, index) => (
               <div key={index} className="p-4">
-                <div className="bg-transparent w-full border-4 border-double border-white rounded-xl shadow-md p-6 text-center">
+                <div className="bg-transparent w-full bg-gradient-to-tr from-black to-lime-50 border-4 border-double border-white rounded-xl shadow-md p-6 ">
                   <Image
                     src={course.image}
                     alt={course.title}
                     width={180}
-                    height={140}
-                    className="mx-auto w-full h-auto rounded-lg"
+                    height={100}
+                    className=" w-full h-auto rounded-lg"
                   />
-                  <h3 className="text-xl font-semibold mt-4">{course.title}</h3>
-                  <p className="text-green font-bold mt-2">{course.price}</p>
-                  <p className="text-grayBlue text-sm mt-2">Live Classes · Beginner</p>
+                  <h3 className="text-2xl mt-4">{course.title}</h3>
+                  <p className="text-yellow-300 text-3xl font-bold  mt-2">{course.price}</p>
+                  {/* this is  the duration level box  */}
+                  <div className=" grid grid-cols-2 my-3 border border-white py-2 px-4 rounded-md">
+                    {/* duration column  */}
+                    <div className="flex items-center gap-x-1">
+                      <div>
+                        <IoMdTime  className="inline-block mr-2 text-xl text-green" />
+                      </div>
+                      <div>
+                        <p className=" text-[11px]">Duration</p>
+                        <p className="  text-yellow-300">Beginner</p>
+                      </div>
+                    </div>
+                     {/* Level column  */}
+                    <div className="flex items-center gap-x-1 justify-end my-[2px] border-l border-white">
+                      <div>
+                        <FiBarChart className="inline-block mr-2 text-xl text-green" />
+                      </div>
+                      <div>
+                        <p className=" text-[11px]">Level</p>
+                        <p className="  text-yellow-300">Beginner</p>
+                      </div>
+                    </div>
+                    
+                   
+                  </div>
 
-                  <div className="mt-4 flex justify-center space-x-3">
-                    <button className="bg-green text-white px-4 py-2 rounded-full hover:bg-green/90">
+                  <div className="flex justify-between mt-5">
+                    <button className="bg-[#659a68] w-[47%] text-white px-4 py-2 rounded-full hover:bg-green/90">
                       Register Now
                     </button>
-                    <button className="border border-green text-green px-4 py-2 rounded-full hover:bg-green hover:text-white">
+                    <button className="  text-white w-[47%] px-4 py-2 border border-white rounded-full hover:bg-green hover:text-white">
                       See Details
                     </button>
                   </div>

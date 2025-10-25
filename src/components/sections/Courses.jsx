@@ -1,9 +1,41 @@
 'use client';
-import Image from 'next/image';
 import React from 'react';
+
 import Carousel from 'react-multi-carousel';
-import "react-multi-carousel/lib/styles.css";
+import 'react-multi-carousel/lib/styles.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import quran from '../../../public/images/quran.webp';
+import CarouselCourseCard from '../Cards/CarouselCourseCard';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+
+/* ===========================================================
+   ✅ Custom Left & Right Arrows
+   These will override the default carousel arrows
+=========================================================== */
+
+const CustomLeftArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+   className="absolute left-0  bg-white top-[30%]  border border-black text-black px-4 py-2 shadow-lg hover:bg-[#4d8050] transition-all z-10"
+     aria-label="Previous Slide"
+  >
+    <FaArrowLeft size={18} />
+  </button>
+);
+
+const CustomRightArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-0 top-[30%]  bg-[#659a68] text-white px-4 py-2 shadow-lg hover:bg-[#4d8050] transition-all z-10"
+    aria-label="Next Slide"
+  >
+    <FaArrowRight size={18} />
+  </button>
+);
+
+/* ===========================================================
+   ✅ Courses Component
+=========================================================== */
 
 function Courses() {
   const courses = [
@@ -11,9 +43,10 @@ function Courses() {
     { title: "Quran & Tajweed", price: "$35.00", image: quran },
     { title: "Quran Recitation", price: "$70.00", image: quran },
     { title: "Quran Memorization", price: "$120.00", image: quran },
+    { title: "Islamic Studies", price: "$65.00", image: quran },
   ];
 
-  // ✅ responsive breakpoints
+  // ✅ Responsive Breakpoints
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1280 },
@@ -23,10 +56,12 @@ function Courses() {
     desktop: {
       breakpoint: { max: 1280, min: 1024 },
       items: 3,
+      partialVisibilityGutter: 20,
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
       items: 2,
+      partialVisibilityGutter: 15,
     },
     mobile: {
       breakpoint: { max: 768, min: 0 },
@@ -35,44 +70,34 @@ function Courses() {
   };
 
   return (
-    <section className="bg-softGray py-16">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-darkGray1 text-center mb-10">
-          Explore Featured <span className="text-green">Courses</span>
-        </h2>
+    <section className="px-8 py-10 bg-[#f6f4f0]">
+      {/* ✅ Main Wrapper */}
+      <div className="max-w-7xl mx-auto relative">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-3xl font-extrabold text-gray-800">
+            Explore Featured <span className="text-[#659a68]">Courses</span>
+          </h2>
+        </div>
 
+        {/* ✅ Carousel Wrapper */}
         <Carousel
           responsive={responsive}
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={3500}
           arrows={true}
           showDots={false}
-          containerClass="pb-8"
-          itemClass="px-4"
+          keyBoardControl={true}
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+          customTransition="transform 600ms ease-in-out"
+          transitionDuration={600}
+          containerClass="relative"
+          itemClass="px-3"
         >
-          {courses.map((course, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md p-6 text-center">
-              <Image
-                src={course.image}
-                alt={course.title}
-                width={180}
-                height={140}
-                className="mx-auto rounded-md"
-              />
-              <h3 className="text-xl font-semibold mt-4">{course.title}</h3>
-              <p className="text-green font-bold mt-2">{course.price}</p>
-              <p className="text-grayBlue text-sm mt-2">
-                Live Classes · Beginner
-              </p>
-              <div className="mt-4 flex justify-center space-x-3">
-                <button className="bg-green text-white px-4 py-2 rounded-full hover:bg-green/90">
-                  Register Now
-                </button>
-                <button className="border border-green text-green px-4 py-2 rounded-full hover:bg-green hover:text-white">
-                  See Details
-                </button>
-              </div>
+          {courses.map((item, index) => (
+            <div key={index}>
+              <CarouselCourseCard item={item} />
             </div>
           ))}
         </Carousel>
