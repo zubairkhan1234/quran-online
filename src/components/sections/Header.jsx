@@ -20,7 +20,7 @@ const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false });
 const CustomLeftArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -left-1 top-40 -translate-y-1/2 bg-white  px-4 py-2 rounded-rounded shadow-lg hover:bg-yellow-600 transition-all z-10"
+    className="absolute left-1 top-60 -translate-y-1/2 bg-[#659a68]  px-4 py-2 rounded shadow-lg hover:bg-[#659a68] transition-all z-10"
     aria-label="Previous Slide"
   >
     <FaArrowLeft size={15} className="text-black" />
@@ -30,7 +30,7 @@ const CustomLeftArrow = ({ onClick }) => (
 const CustomRightArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -right-1 top-40 -translate-y-1/2 bg-yellow-500  px-4 py-2 rounded shadow-lg hover:bg-yellow-600 transition-all z-10"
+    className="absolute right-1 top-60 -translate-y-1/2 bg-[#659a68]  px-4 py-2 rounded shadow-lg hover:bg-[#659a68] transition-all z-10"
     aria-label="Next Slide"
   >
     <FaArrowRight size={15} className=" text-black" />

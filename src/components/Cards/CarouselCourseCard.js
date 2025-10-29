@@ -35,7 +35,7 @@ const CarouselCourseCard = ({ item }) => {
                         </div>
                         <div>
                             <p className=" text-[11px]">Duration</p>
-                            <p className="  text-yellow-300">Beginner</p>
+                            <p className="  text-[#659a68]">Beginner</p>
                         </div>
                     </div>
                     {/* Level column  */}
@@ -45,7 +45,7 @@ const CarouselCourseCard = ({ item }) => {
                         </div>
                         <div>
                             <p className=" text-[11px]">Level</p>
-                            <p className="  text-yellow-300">Beginner</p>
+                            <p className="  text-[#659a68]">Beginner</p>
                         </div>
                     </div>
 

@@ -15,7 +15,7 @@ function Navigation() {
     <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-md relative header-dark">
       {/* Logo */}
       <div className="flex-shrink-0">
-        <Image src="/logo.png" width={80} height={20} alt="Logo" />
+        <Image src="/images/logo/logo.png" width={80} height={20} alt="Logo" />
       </div>
 
       {/* Desktop Menu */}

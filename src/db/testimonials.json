@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Ayesha Khan",
+      "country": "Pakistan",
+      "rating": 5,
+      "message": "This app has completely changed how I connect with the Quran. The audio recitation and translation features are so easy to use!",
+      "profileImage": "/images/students/student5.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Omar Abdullah",
+      "country": "UAE",
+      "rating": 4,
+      "message": "I love the clean design and tafseer options. It helps me understand verses better. Would love to see dark mode soon!",
+      "profileImage": "/images/students/student.jpeg"
+
+    },
+    {
+      "id": 3,
+      "name": "Fatima Noor",
+      "country": "UK",
+      "rating": 5,
+      "message": "Perfect app for daily Quran reading! I especially appreciate the bookmarking and daily ayah reminder feature.",
+      "profileImage": "/images/students/student5.jpeg"
+
+    },
+    {
+      "id": 4,
+      "name": "Ali Raza",
+      "country": "Canada",
+      "rating": 5,
+      "message": "Beautiful UI and accurate Arabic text. I use it every morning after Fajr prayer. Highly recommended for everyone.",
+      "profileImage": "/images/students/student3.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Sana Malik",
+      "country": "India",
+      "rating": 4,
+      "message": "It’s a great companion for learning tajweed. The slow playback and transliteration help a lot for beginners.",
+      "profileImage": "/images/students/student5.jpeg"
+    }
+  ]
+  

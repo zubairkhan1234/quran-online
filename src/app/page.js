@@ -16,7 +16,7 @@ export default function Home() {
       <section className="header-dark">
         <Header />
       </section>
-      <div className="container m-auto">
+      <div>
         <Courses />
       </div>
       <div>
