@@ -58,7 +58,7 @@ function Navigation() {
         }`}
       >
         <div className="flex justify-between items-center px-6 py-4 border-b">
-          <Image src="/logo.png" width={80} height={20} alt="Logo" />
+          <Image src="/images/logo/logo.png" width={40} height={40} alt="Logo" />
           <FaTimes
             size={20}
             onClick={toggleMenu}
@@ -76,7 +76,7 @@ function Navigation() {
 
         <div className="mt-8 px-6 flex flex-col gap-3">
           <Buttons fill={true}>Sign In</Buttons>
-          <Buttons>Sign Up</Buttons>
+          <Buttons fill={true}>Sign Up</Buttons>
         </div>
       </div>
 
