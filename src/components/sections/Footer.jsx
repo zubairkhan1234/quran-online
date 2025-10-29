@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="text-gray-300 pt-12 pb-6">
+    <footer className="text-gray-300 pt-10 p-4 md:p-6" >
       {/* Newsletter Section */}
       <div className="container m-auto">
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-8">

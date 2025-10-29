@@ -68,7 +68,7 @@ function ClassActivity() {
             </p>
 
 
-            <div className="w-[800px] mt-10 md:mt-0 relative bg-darkGray2 rounded-xl mx-auto p-0">
+            <div className="w-full max-w-[400px] md:max-w-[600px] lg:max-w-[800px] mt-10 md:mt-0 relative bg-darkGray2 rounded-xl mx-auto p-0">
                 <Carousel
                     responsive={responsive}
                     infinite={true}

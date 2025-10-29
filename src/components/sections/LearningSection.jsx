@@ -5,7 +5,8 @@ import Image from "next/image";
 import quranImage from '../../../public/images/quraninmobile.webp';
 export default function LearningSection() {
   return (
-    <section className="bg-[#f6f4f0] py-20">
+    <section className="bg-[#f6f4f0] py-10">
+      {/* First Row */}
       <div className="container mx-auto px-4 md:p-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Text */}
         <div>
@@ -30,26 +31,26 @@ export default function LearningSection() {
             alt="Quran app on phone"
             width={450}
             height={300}
-            className="rounded-xl shadow-lg h-[400px] object-cover w-[auot]"
+            className="rounded-xl shadow-lg w-full h-auto md:h-[400px] object-cover max-w-[450px]"
           />
         </div>
       </div>
 
       {/* Second Row */}
-      <div className="container mx-auto px-4 md:p-6 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 md:p-6 mt-20 flex flex-col-reverse lg:flex-row gap-16 items-center">
         {/* Left Image */}
-        <div className="flex justify-center">
+        <div className="flex justify-center w-full">
           <Image
             src={quranImage}
             alt="Reading Quran"
             width={450}
             height={300}
-            className="rounded-xl shadow-lg h-[400px] object-cover w-[auot]"
+            className="rounded-xl shadow-lg w-full h-auto md:h-[400px] object-cover max-w-[450px]"
           />
         </div>
 
         {/* Right Text */}
-        <div>
+        <div className="w-full">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             How to memorize Quran{" "}
             <span className="text-[#659a68]">easily online</span>
@@ -74,5 +75,6 @@ export default function LearningSection() {
         </div>
       </div>
     </section>
+
   );
 }
