@@ -71,7 +71,7 @@ function Courses() {
 
   return (
     <section className="bg-[#f6f4f0]">
-      <div className="px-8 py-10 bg-[#f6f4f0] container m-auto">
+      <div className="p-4 md:p-6 bg-[#f6f4f0] container m-auto">
         {/* ✅ Main Wrapper */}
         <div className="max-w-7xl mx-auto relative">
           <div className="flex items-center justify-between mb-6">

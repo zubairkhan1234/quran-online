@@ -6,7 +6,7 @@ import { FaBook, FaCalendarAlt, FaUsers, FaGamepad } from "react-icons/fa";
 export default function SuccessSection() {
   return (
     <section className="bg-[#f6f4f0] py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:p-6">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900">
