@@ -37,7 +37,7 @@ body {
 
 
 
-.header-dark{
+.sections-dark{
   background-color: #1d1d1d;
 }
 
@@ -65,4 +65,8 @@ body {
 .explore-courses
 .slick-prev {
     left: -10px !important;
+}
+
+.react-multi-carousel-track  li {
+  padding: 10px !important;
 }

@@ -5,10 +5,10 @@ import { FaBook, FaCalendarAlt, FaUsers, FaGamepad } from "react-icons/fa";
 
 export default function SuccessSection() {
   return (
-    <section className="bg-[#f6f4f0] py-10">
-      <div className="container mx-auto px-4 md:p-6">
+    <section className="bg-[#f6f4f0] px-5 md:px-10 ld:px-0 py-5 md:py-10 ">
+      <div className="container mx-auto  ">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900">
             Creating student <span className="text-[#659a68]">success</span>{" "}
             with our <span className="text-[#659a68]">Al Quran</span>
@@ -20,7 +20,7 @@ export default function SuccessSection() {
         </div>
 
         {/* Green Feature Bar */}
-        <div className="bg-[#659a68] text-white rounded-2xl py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-[#659a68] text-white rounded-2xl mt-5 lg:mt-0 py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               icon: <FaBook size={28} />,

@@ -12,7 +12,7 @@ function Navigation() {
   const menuItems = ['Home', 'Courses', 'Learning Styles', 'Blog', 'About Us']
 
   return (
-    <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-md relative header-dark">
+    <nav className="flex items-center justify-between bg-white shadow-md relative sections-dark px-5 md:px-10 ld:px-0">
       {/* Logo */}
       <div className="flex-shrink-0">
         <Image src="/images/logo/logo.png" width={80} height={20} alt="Logo" />
@@ -30,7 +30,7 @@ function Navigation() {
 
         <div className="ms-8 flex gap-2">
           <Buttons fill={true}>Sign In</Buttons>
-          <Buttons>Sign Up</Buttons>
+          {/* <Buttons>Sign Up</Buttons> */}
         </div>
       </div>
 
@@ -76,7 +76,7 @@ function Navigation() {
 
         <div className="mt-8 px-6 flex flex-col gap-3">
           <Buttons fill={true}>Sign In</Buttons>
-          <Buttons fill={true}>Sign Up</Buttons>
+          {/* <Buttons fill={true}>Sign Up</Buttons> */}
         </div>
       </div>
 

@@ -57,7 +57,7 @@ function ClassActivity() {
         },
     };
     return (
-        <div className='my-10'>
+        <div className='container m-auto px-5 md:px-10 ld:px-0  py-5 md:py-10'>
             <h2 className="text-4xl font-bold text-gray-900 mb-3 text-center">
                 Hear From Our <span className="text-[#659a68]">Quran Learners</span>
             </h2>

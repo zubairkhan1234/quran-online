@@ -13,24 +13,12 @@ export default function Home() {
   return (
     <div className="font-roboto">
       <Navigation />
-      <section className="header-dark">
-        <Header />
-      </section>
-      <div>
-        <Courses />
-      </div>
-      <div>
-        <LearningSection />
-      </div>
-      <div>
-        <SuccessSection />
-      </div>
-      <div className="container m-auto">
-        <ClassActivity />
-      </div>
-      <div className="header-dark">
-        <Footer />
-      </div>
+      <Header />
+      <Courses />
+      <LearningSection />
+      <SuccessSection />
+      <ClassActivity />
+      <Footer />
     </div>
   );
 }

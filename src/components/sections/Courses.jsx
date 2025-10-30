@@ -59,19 +59,19 @@ function Courses() {
       partialVisibilityGutter: 20,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 768 },
+      breakpoint: { max: 1024, min: 481 },
       items: 2,
       partialVisibilityGutter: 15,
     },
     mobile: {
-      breakpoint: { max: 768, min: 0 },
+      breakpoint: { max: 481, min: 0 },
       items: 1,
     },
   };
 
   return (
     <section className="bg-[#f6f4f0]">
-      <div className="p-4 md:p-6 bg-[#f6f4f0] container m-auto">
+      <div className="bg-[#f6f4f0] container m-auto px-5 md:px-10 ld:px-0 py-5 md:py-10">
         {/* ✅ Main Wrapper */}
         <div className="max-w-7xl mx-auto relative">
           <div className="flex items-center justify-between mb-6">

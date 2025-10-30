@@ -66,10 +66,10 @@ function HeroSection() {
   };
 
   return (
-    <section className="bg-darkGray1 text-white py-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-2  md:px-6">
+    <section className="text-white sections-dark  ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-2  md:px-6 pb-3 md:pb-6">
         {/* ✅ Left Content */}
-        <div className="md:w-1/2 p-2 md:p-0">
+        <div className="md:w-1/2 p-2 md:pr-8">
           <h1 className="text-4xl font-bold leading-snug text-lightCream">
             Recite the <span className="text-green">Quran</span> in an orderly and clear manner
           </h1>
@@ -88,7 +88,7 @@ function HeroSection() {
         </div>
 
         {/* ✅ Right Carousel with Custom Arrows */}
-        <div className="w-full md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-0 md:p-8 ">
+        <div className="w-full md:w-1/2 mt-10 md:mt-0 relative bg-darkGray2 rounded-xl p-0 ">
           <Carousel
             responsive={responsive}
             infinite={true}
