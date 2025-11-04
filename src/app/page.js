@@ -13,12 +13,10 @@ export default function Home() {
   return (
     <div className="font-roboto">
       <Navigation />
-      <Header />
       <Courses />
       <LearningSection />
       <SuccessSection />
       <ClassActivity />
-      <Footer />
     </div>
   );
 }

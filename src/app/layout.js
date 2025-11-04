@@ -4,6 +4,9 @@ import "./globals.css";
 // import "slick-carousel/slick/slick-theme.css";
 
 import "react-multi-carousel/lib/styles.css";
+import Footer from "@/components/sections/Footer";
+import Navigation from "@/components/sections/Navigation";
+import Header from "@/components/sections/Header";
 
 export const metadata = {
   title: "Online Quran Academy",
@@ -21,7 +24,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased text-[#1e1e1e]`}>
+        <Navigation />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
