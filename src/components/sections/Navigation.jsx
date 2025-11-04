@@ -65,7 +65,7 @@ function Navigation() {
           <FaBars
             size={24}
             onClick={toggleMenu}
-            className="cursor-pointer text-gray-800"
+            className="cursor-pointer text-white"
           />
         )}
       </div>

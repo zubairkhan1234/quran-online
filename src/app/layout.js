@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import Footer from "@/components/sections/Footer";
 import Navigation from "@/components/sections/Navigation";
 import Header from "@/components/sections/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Online Quran Academy",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${roboto.variable} antialiased text-[#1e1e1e]`}>
         <Navigation />
+        <ScrollToTop />
         <Header />
         {children}
         <Footer />

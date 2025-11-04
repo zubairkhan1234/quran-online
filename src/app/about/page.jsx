@@ -48,9 +48,9 @@ export default function AboutPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { name: "Ustadh Ahmed", role: "Quran & Tajweed Expert", img: "/images/teachers/teacher1.jpeg" },
-                            { name: "Ustadha Fatima", role: "Arabic Language Instructor", img: "/images/teachers/teacher2.jpeg" },
-                            { name: "Ustadh Bilal", role: "Quran Recitation Coach", img: "/images/teachers/teacher3.jpeg" },
+                            { name: "Qari Ahmed", role: "Quran & Tajweed Expert", img: "/images/teachers/teacher1.jpeg" },
+                            { name: "Mufti Qasim", role: "Arabic Language Instructor", img: "/images/teachers/teacher2.jpeg" },
+                            { name: "Mufti Bilal", role: "Quran Recitation Coach", img: "/images/teachers/teacher3.jpeg" },
                         ].map((teacher, i) => (
                             <div key={i} className="bg-[#f6f4f0] p-6 rounded-2xl shadow-md hover:shadow-xl transition">
                                 <img
@@ -148,7 +148,7 @@ export default function AboutPage() {
                             “Al Quran has completely changed my learning journey. I can now read with confidence and
                             understand the meaning with guidance from qualified teachers.”
                         </p>
-                        <h3 className="text-lg font-semibold text-[#3b7a57]">— Hafsa, Student</h3>
+                        <h3 className="text-lg font-semibold text-[#3b7a57]">— Arbab, Student</h3>
                     </div>
                 </div>
             </section>
