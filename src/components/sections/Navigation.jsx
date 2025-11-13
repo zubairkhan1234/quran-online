@@ -13,8 +13,8 @@ function Navigation() {
   const menuItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Courses', path: '/courses' },
-    { name: 'Learning Styles', path: '/learning-styles' },
+    // { name: 'Courses', path: '/courses' },
+    // { name: 'Learning Styles', path: '/learning-styles' },
     { name: 'Contact', path: '/contact' },
   ]
 
