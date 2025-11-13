@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import quranImage from '../../../public/images/quraninmobile.webp';
+import quranImage1 from '../../../public/images/learning1.png';
+import quranImage2 from '../../../public/images/learning2.png';
 export default function LearningSection() {
   return (
     <section className="bg-[#f6f4f0] ">
@@ -28,7 +29,7 @@ export default function LearningSection() {
           {/* Right Image */}
           <div className="flex justify-center">
             <Image
-              src={quranImage}
+              src={quranImage1}
               alt="Quran app on phone"
               width={450}
               height={300}
@@ -42,7 +43,7 @@ export default function LearningSection() {
           {/* Left Image */}
           <div className="flex justify-center w-full">
             <Image
-              src={quranImage}
+              src={quranImage2}
               alt="Reading Quran"
               width={450}
               height={300}

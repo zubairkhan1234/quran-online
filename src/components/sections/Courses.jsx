@@ -7,6 +7,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import quran from '../../../public/images/quran.webp';
 import CarouselCourseCard from '../Cards/CarouselCourseCard';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import Buttons from '../buttons/Buttons';
 
 /* ===========================================================
    ✅ Custom Left & Right Arrows
@@ -102,6 +103,12 @@ function Courses() {
               </div>
             ))}
           </Carousel>
+        </div>
+        <div className="flex justify-center mt-8">
+          <Buttons fill={true} className={'w-[200px] h-[40px] rounded-md flex items-center justify-center text-white text-sm font-semibold'}>
+            All Courses 
+            
+          </Buttons>
         </div>
       </div>
     </section>
